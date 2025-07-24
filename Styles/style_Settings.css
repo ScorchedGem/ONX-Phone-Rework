@@ -1,0 +1,511 @@
+:root {
+    --app-color-scheme-custom-1: #9e7992;
+    --app-color-scheme-custom-2: #685858;
+    --app-color-scheme-custom-font-1: #ff8cae;
+    --app-color-scheme-custom-font-2: #e5c0dc;
+
+    --app-color-settings-1: #353535;
+    --app-color-settings-2: #3cb6d2;
+    --app-color-settings-bg: #1c1c1c;
+    --app-color-settings-bg-2: #1c1c1c;
+    --app-color-settings-font-1: #f0f0f0;
+    --app-color-settings-font-2: rgb(215, 215, 215);
+
+    --app-height: 100vh;
+    --app-width: 100vw;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.15;
+    width: 100vw;
+}
+
+body {
+    color: #fff;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.1vw;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    user-select: none;
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: var(--app-color-settings-font-1);
+}
+
+h2 {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    color: var(--app-color-settings-font-2);
+}
+
+i {
+    position: relative;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.underline {
+    text-decoration: underline var(--app-color-settings-1);
+}
+
+.transparent {
+    color: transparent;
+}
+
+span,
+i,
+.font1 {
+    color: var(--app-color-settings-font-1)
+}
+
+.font2 {
+    color: var(--app-color-settings-font-2)
+}
+
+.Info-Background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+
+    background: rgb(2, 0, 36);
+    background: repeating-linear-gradient(
+            45deg,
+            #242424,
+            #242424 10px,
+            #202020 10px,
+            #202020 20px
+    );
+
+    z-index: 3;
+
+    scale: 0.5;
+    border-radius: 100%;
+    opacity: 0;
+}
+
+.settings-logo {
+    position: absolute;
+    background-image: url("../Images/logo-white.png");
+    width: 300px;
+    height: 488px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(0.65) translateY(40px);
+    filter: opacity(0.05);
+}
+
+.LL-Page {
+    height: 100%;
+    display: flex;
+}
+
+/**NEW ENTRY OPTIONS**/
+.LL-NewPost-Option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+
+    background-color: #474747;
+    width: 18vw;
+    bottom: 12vh;
+    border-radius: 1vh;
+    transition: all 250ms;
+    z-index: 1;
+}
+
+.LL-NewPost-Wrapper {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    height: 19vh;
+}
+
+.LL-entry-gradient {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    bottom: 12vh;
+    position: absolute;
+    transition: all 250ms;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.LL-entry-option-h2:hover {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/**SCROLL BAR**/
+.LL-Scroll-Wrapper {
+    position: absolute;
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.LL-Scroll-Wrapper::-webkit-scrollbar {
+    height: 4px;
+    width: 0.75vw;
+    transform: translateX(0.75vw);
+}
+
+.LL-Scroll-Wrapper::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.LL-Scroll-Wrapper::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/**LL SETTINGS PANEL**/
+.settings-wrapper {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 92.5%;
+    row-gap: 8px;
+    z-index: 2;
+    background: repeating-linear-gradient(
+            45deg,
+            #242424,
+            #242424 10px,
+            #202020 10px,
+            #202020 20px
+    );
+    transition: left 250ms;
+    bottom: 0;
+}
+
+#settings.active {
+    left: 0;
+}
+
+.setting-backer-p1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #101010;
+    display: flex;
+}
+
+.setting-backer-p2 {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    background-color: #36d6e2;
+    right: -10%;
+    display: flex;
+}
+
+.setting-backer-p3 {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color: #1486b3;
+    right: -10%;
+    display: flex;
+}
+
+.setting-wrapper, .setting-wrapper-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 5vh;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.setting-splitter {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background-color: var(--app-color-settings-bg);
+    padding: 0 2.5% 0 4.5%;
+    right: 0;
+    left: 0;
+    position: relative;
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
+.setting-label {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+
+    display: flex;
+    justify-self: center;
+
+    user-select: none;
+}
+
+:nth-child(odd)>.setting-splitter {
+    background-color: var(--app-color-settings-bg-2);
+}
+
+.setting-bottom {
+    width: 90%;
+    background: #00000054;
+    height: 0.2vh;
+}
+
+.setting-splitter>h1 {
+    font-weight: normal;
+}
+
+/* Hide the browser's default checkbox */
+.setting-label input {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.dropdown {
+    background-color: #3c3c3c;
+    color: white;
+    border: #3a3a3a solid 0.3vh;
+    border-radius: 0.5vh;
+    width: 100%;
+}
+
+.dropdown-content {
+    background-color: #303030;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: relative;
+    height: 28px;
+    width: 28px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0.5vh;
+    background-color: #303030;
+}
+
+/* On mouse-over, add a grey background color */
+.setting-label:hover input~.checkmark {
+    background-color: #505050;
+}
+
+/* When the checkbox is checked, add a blue background */
+.setting-label input:checked~.checkmark {
+    background-color: var(--app-color-settings-2);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.setting-label input:checked~.checkmark:after {
+    display: flex;
+}
+
+/* Style the checkmark/indicator */
+.setting-label .checkmark:after {
+    width: 10px;
+    height: 10px;
+    border: solid white 3px;
+}
+
+.credits {
+    display: flex;
+    z-index: 1;
+    color: #aeaeae;
+    justify-content: center;
+}
+
+/**New Note Panel**/
+.new-note-panel {
+    position: absolute;
+    width: 100%;
+    height: 45%;
+    left: -0.15vh;
+
+    background: #1d2127;
+    border: rgb(15, 15, 15) solid 0.3vh;
+    border-bottom: none;
+    border-radius: 1vw 1vw 1vw 0;
+    transition: bottom 250ms;
+    z-index: 1;
+}
+
+.new-note-entry {
+    width: auto;
+    height: 60%;
+    margin: 1vh;
+    padding: 1vh;
+    background: #ffffff08;
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-note-header {
+    position: relative;
+    padding-left: 0.5vw;
+    font-size: 2vh;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.new-note-entryfield {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+    resize: none;
+
+    border: 0.3vh solid #00000017;
+    border-radius: 0.25vh;
+    background-color: #00000030;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: normal;
+    font-size: 1.75vh;
+    text-align: center;
+    line-height: 8px;
+
+    text-box-trim: trim-both;
+    overflow-y: clip;
+    padding: 4px;
+}
+
+.new-note-color-wrapper {
+    position: absolute;
+    bottom: calc(18% - 0.3vh);
+    width: 63%;
+    height: 3vh;
+    background-color: #ffffff08;
+    border-radius: 0.5vh;
+    left: 3%;
+    margin: 0.3vh;
+}
+
+.settings-button {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    width: 90%;
+    background-color: var(--app-color-settings-1);
+    border-radius: var(--border-rad-medium);
+    box-shadow: 0 0 8px #0b131a;
+    z-index: 1;
+}
+
+.settings-button:hover { filter: brightness(90%); }
+.settings-button:active { filter: brightness(110%); }
+
+.settings-button > h1 {
+    padding: 0 20px;
+}
+
+.options-page, .options-page-enabled {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 100%;
+    transition: left 150ms;
+}
+
+.options-page-enabled {
+    left: 0;
+}
+
+.options-back {
+    display: flex;
+    position: absolute;
+    left: 14px;
+    top: 62px;
+
+    cursor: pointer;
+    z-index: 3;
+}
+
+.options-back > i {
+    transition: all 0.1s;
+    transform: scaleX(125%);
+    filter: brightness(80%);
+}
+
+.options-back:hover > i {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.33);
+    filter: brightness(100%);
+    transform: scaleX(125%) scaleY(-100%);
+}
+
+.settings-header {
+    display: flex;
+    width: 90%;
+    height: fit-content;
+    margin-top: 17px;
+    background-color: var(--app-color-settings-1);
+    border-radius: 50px 10px 10px 50px;
+    box-shadow: 0 0 8px #0b131a;
+    z-index: 1;
+}
+
+.setting-wrapper-header {
+    background-color: var(--app-color-settings-1);
+    box-shadow: 0 0 8px #0b131a;
+}
+
+.settings-profile-pic {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../Images/BANNER2.png");
+    border-radius: 50px;
+    margin: 8px;
+}

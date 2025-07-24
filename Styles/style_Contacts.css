@@ -1,0 +1,338 @@
+:root {
+    --app-color-scheme-custom-1: #9e7992;
+    --app-color-scheme-custom-2: #685858;
+    --app-color-scheme-custom-font-1: #ff8cae;
+    --app-color-scheme-custom-font-2: #e5c0dc;
+
+    --app-color-contacts-1: #191919;
+    --app-color-contacts-2: #131313;
+    --app-color-contacts-3: #151515;
+    --app-color-contacts-bg-1: #222222;
+    --app-color-contacts-bg-2: #393939;
+    --app-color-contacts-button-1: #5a5a5a;
+    --app-color-contacts-button-2: #6a6a6a;
+    --app-color-contacts-button-3: #555555;
+    --app-color-contacts-font-1: #f0f0f0;
+    --app-color-contacts-font-2: rgb(255, 255, 255);
+
+    --app-height: 100vh;
+    --app-width: 100vw;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    color: var(--app-color-contacts-font-1);
+}
+
+h2 {
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: var(--app-color-contacts-font-2);
+}
+
+i {
+    position: relative;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span,
+i,
+.font1 {
+    color: var(--app-color-contacts-font-1)
+}
+
+.font2 {
+    color: var(--app-color-contacts-font-2)
+}
+
+.Info-Background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    background: var(--app-color-contacts-bg-1);
+    z-index: 3;
+
+    scale: 0.5;
+    border-radius: 100%;
+    opacity: 0;
+    background: repeating-linear-gradient(
+            45deg,
+            #242424,
+            #242424 10px,
+            #202020 10px,
+            #202020 20px
+    );
+}
+
+.Co-Page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Co-Main-Wrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.Co-List-Wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    justify-items: center;
+    align-items: center;
+
+    gap: 6px;
+}
+
+.Co-Contact-Wrapper {
+    width: 95%;
+    height: 62px;
+    display: flex;
+    position: relative;
+    background-color: var(--app-color-contacts-1);
+    border-radius:var(--border-rad-large);
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.Co-Contact-Wrapper:hover {
+    background-color: var(--app-color-contacts-2);
+}
+
+.Co-Contact-Wrapper:active {
+    background-color: var(--app-color-contacts-3);
+}
+
+.Co-Header {
+    height: fit-content;
+    background-color: var(--app-color-contacts-bg-2);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 45px;
+    grid-template-rows: 1fr;
+}
+
+.Co-Header input[type=text] {
+    width: 92%;
+
+    float: right;
+    padding: 6px;
+    margin: 8px 0 8px 8px;
+    font-size: 17px;
+    background-color: var(--app-color-contacts-bg-1);
+    color: var(--app-color-contacts-font-1);
+
+    border-radius: var(--border-rad-medium);
+    border: none;
+}
+
+.Co-Contact-Img {
+    height: 52px;
+    width: 52px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--border-rad-xlarge);
+    margin: 6px;
+}
+
+.co-i:hover {
+    text-shadow: 0 0 4px white;
+    cursor: pointer;
+}
+
+.Co-Page-Wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    align-items: center;
+}
+
+.Co-Pages-Wrapper {
+    position: absolute;
+    display: grid;
+    width: 200%;
+    height: 84%;
+
+    grid-template-columns: 1fr 1fr;
+    transition: left 0.2s;
+    left: 0;
+    bottom: 0;
+}
+
+.Co-P-Name {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.Co-P-Subtext {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.Co-P-Picture-Wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 85%;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 26px;
+}
+
+.Co-P-Picture {
+    display: flex;
+    position: relative;
+    height: 160px;
+    aspect-ratio: 1 / 1;
+    background-color: var(--app-color-contacts-bg-1);
+    border: 3px solid var(--app-color-contacts-1);
+    border-radius: var(--border-rad-xlarge);
+    background-position: center;
+    background-size: cover;
+}
+
+.Co-P-Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 52px;
+    height: 36px;
+
+    background-color: var(--app-color-contacts-button-1);
+    border-radius: var(--border-rad-medium);
+    transition: background-color 0.1s, border-radius 0.1s;
+    box-shadow: black 0 0 8px;
+    cursor: pointer;
+}
+
+.Co-P-Button:hover {
+    background-color: var(--app-color-contacts-button-2);
+    border-radius: calc(var(--border-rad-medium) + 2px);
+}
+
+.Co-P-Button:Active {
+    background-color: var(--app-color-contacts-button-3);
+    border-radius: calc(var(--border-rad-medium) + 1px);
+}
+
+
+.Co-P-Button i{
+    color: var(--app-color-contacts-font-1);
+    font-size: 16px;
+}
+
+.Co-P-Button:hover i{
+    text-shadow: 0 0 2px white;
+    font-size: 15px;
+}
+
+.Co-P-Button:active i{
+    text-shadow: 0 0 3px white;
+    font-size: 15px;
+}
+
+.Co-P-Button-Wrapper {
+    display: flex;
+    width: 100%;
+    height: 180px;
+    gap: 8px;
+
+    justify-content: center;
+    align-items: center;
+    margin-top: 26px;
+    background-color: var(--app-color-contacts-1);
+    border-radius: 20px 20px 0 0;
+}
+
+.Co-Info-Wrapper {
+    display: flex;
+    position: relative;
+    width: 85%;
+    height: 30px;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Co-Info-Title {
+    font-size: 14px;
+}
+
+.Co-Info-Description {
+    font-size: 14px;
+}
+
+.Co-Info-Panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    background-color: var(--app-color-contacts-1);
+}
+
+.Co-Info-Copy {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.Co-Info-Copy:hover {
+    text-shadow: 0 0 4px white;
+}
+
+.Co-Info-Copy:active {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.Co-Back {
+    display: flex;
+    position: absolute;
+    left: 10px;
+    top: 6px;
+
+    cursor: pointer;
+    z-index: 3;
+    transition: transform 0.2s;
+}
+
+.Co-Back > i {
+    transition: all 0.1s;
+    transform: scaleX(125%);
+    filter: brightness(80%);
+}
+
+.Co-Back:hover > i {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.33);
+    filter: brightness(100%);
+    transform: scaleX(125%) scaleY(-100%);
+}

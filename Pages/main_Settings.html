@@ -1,0 +1,141 @@
+<div class="LL-Page">
+    <div class="LL-Scroll-Wrapper">
+        <div class="settings-wrapper">
+            <div class="settings-logo"></div>
+            <div class="settings-header"><div class="settings-profile-pic"></div>
+                <div style="align-content: center;">
+                    <h1>Kira Nouta</h1>
+                    <h2>18519</h2>
+                </div>
+            </div>
+            <div class="settings-button" style="margin-top: 2%;" onclick="OpenPage(0)"><h1>UI Settings</h1></div>
+            <div class="settings-button" onclick="OpenPage(1)"><h1>Audio Settings</h1></div>
+            <div class="settings-button" onclick="OpenPage(2)"><h1>Personal Settings</h1></div>
+            <h2 class="credits">Rights Reserved. EchoSkies 2024</h2>
+        </div>
+    </div>
+    <div class="options-page" id="UI-Settings">
+        <div class="options-back" onclick="OpenPage(-1)"><i class="fa-solid fa-chevron-left" style="font-size: 20px"></i></div>
+        <div class="LL-scroll-Wrapper">
+            <div class="settings-wrapper">
+                <h1 class="setting-wrapper-header">UI Settings</h1>
+                <div class="setting-wrapper">
+                    <div class="setting-splitter">
+                        <h1 class="setting-h1">Phone Wallpaper</h1>
+                        <label class="setting-label">
+                            <textarea class="new-note-entryfield font2">Default</textarea>
+                        </label>
+                    </div>
+                </div>
+                <div class="setting-wrapper">
+                    <div class="setting-splitter">
+                        <h1 class="setting-h1">Favourite Color</h1>
+                        <label class="setting-label">
+                            <select class="dropdown" name="colors" id="ping-colors" style="font-size: 1.8vh;">
+                                <option class="dropdown-content" value="1">White</option>
+                                <option class="dropdown-content" value="2">Red</option>
+                                <option class="dropdown-content" value="3">Orange</option>
+                                <option class="dropdown-content" value="4">Yellow</option>
+                                <option class="dropdown-content" value="5">Green</option>
+                                <option class="dropdown-content" value="6">Pink</option>
+                                <option class="dropdown-content" value="7">Purple</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="setting-wrapper">
+                    <div class="setting-splitter">
+                        <h1 class="setting-h1">Use Favourite Color</h1>
+                        <label class="setting-label">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="setting-wrapper">
+                    <div class="setting-splitter">
+                        <h1 class="setting-h1">Bigger Font</h1>
+                        <label class="setting-label">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="options-page" id="Audio-Settings">
+        <div class="options-back" onclick="OpenPage(-1)"><i class="fa-solid fa-chevron-left" style="font-size: 20px"></i></div>
+        <div class="LL-scroll-Wrapper">
+            <div class="settings-wrapper">
+                <h1 class="setting-wrapper-header">Audio Settings</h1>
+                <div class="setting-wrapper">
+                    <div class="setting-splitter">
+                        <h1 class="setting-h1">Ringtone</h1>
+                        <label class="setting-label">
+                            <select class="dropdown" name="colors" id="ringtones" style="font-size: 1.8vh;">
+                                <option class="dropdown-content" value="1">Marimba</option>
+                                <option class="dropdown-content" value="2">Twinkle</option>
+                                <option class="dropdown-content" value="3">Siren</option>
+                                <option class="dropdown-content" value="4">Obsidian</option>
+                                <option class="dropdown-content" value="5">Onyx</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="setting-wrapper">
+                    <div class="setting-splitter">
+                        <h1 class="setting-h1">Ringtone Enabled</h1>
+                        <label class="setting-label">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="setting-wrapper">
+                    <div class="setting-splitter">
+                        <h1 class="setting-h1">Notification</h1>
+                        <label class="setting-label">
+                            <select class="dropdown" name="colors" id="notifications" style="font-size: 1.8vh;">
+                                <option class="dropdown-content" value="1">Marimba</option>
+                                <option class="dropdown-content" value="2">Twinkle</option>
+                                <option class="dropdown-content" value="3">Siren</option>
+                                <option class="dropdown-content" value="4">Obsidian</option>
+                                <option class="dropdown-content" value="5">Onyx</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="setting-wrapper">
+                    <div class="setting-splitter">
+                        <h1 class="setting-h1">Notification Sounds</h1>
+                        <label class="setting-label">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="options-page" id="Personal-Settings">
+        <div class="options-back" onclick="OpenPage(-1)"><i class="fa-solid fa-chevron-left" style="font-size: 20px"></i></div>
+        <div class="LL-scroll-Wrapper">
+            <div class="settings-wrapper">
+                <h1 class="setting-wrapper-header">Security Settings</h1>
+                <div class="setting-wrapper">
+                    <div class="setting-splitter">
+                        <h1 class="setting-h1">Pin-code</h1>
+                        <label class="setting-label">
+                            <textarea class="new-note-entryfield font2">****</textarea>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="Home-Notch">
+    <div class="Notch"><a onclick="appClose()" style="width: 100%; height: 400%; transform: translateY(-40%);"></a>
+    </div>
+</div>

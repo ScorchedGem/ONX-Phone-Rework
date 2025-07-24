@@ -1,0 +1,720 @@
+:root {
+    --app-color-scheme-custom-1: #9e7992;
+    --app-color-scheme-custom-2: #685858;
+    --app-color-scheme-custom-font-1: #ff8cae;
+    --app-color-scheme-custom-font-2: #e5c0dc;
+
+    --app-color-lemonlist-1: #2c495d;
+    --app-color-lemonlist-bg: #222;
+    --app-color-lemonlist-bg-2: #2b2b2b;
+    --app-color-lemonlist-font-1: #fff;
+    --app-color-lemonlist-font-2: #fff;
+
+    --app-height: 100vh;
+    --app-width: 100vw;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: var(--app-color-lemonlist-font-1);
+}
+
+h2 {
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 250;
+
+    color: var(--app-color-lemonlist-font-2);
+}
+
+i {
+    position: relative;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.underline {
+    text-decoration: underline var(--app-color-lemonlist-1);
+}
+
+.transparent {
+    color: transparent;
+}
+
+span,
+i,
+.font1 {
+    color: var(--app-color-lemonlist-font-1)
+}
+
+.font2 {
+    color: var(--app-color-lemonlist-font-2)
+}
+
+.Info-Background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: repeating-linear-gradient(
+            45deg,
+            #242424,
+            #242424 10px,
+            #202020 10px,
+            #202020 20px
+    );
+
+    z-index: 3;
+
+    scale: 0.5;
+    border-radius: 100%;
+    opacity: 0;
+}
+
+.LL-Page {
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 14% 1fr;
+    z-index: 2;
+}
+
+/**APP TITLE CARD**/
+.titlecard {
+    display: flex;
+    align-items: flex-end;
+
+    position: relative;
+    width: 100%;
+    z-index: 3;
+
+    background-color: var(--app-color-lemonlist-1);
+    box-shadow: 0 -11px 12px 10px #00000091;
+}
+
+.titlecard-grid {
+    position: relative;
+    width: 100%;
+    height: 45%;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+}
+
+.search-wrapper {
+    width: 79%;
+    height: 45%;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.titlecard-i {
+    cursor: pointer;
+    align-self: center;
+    justify-self: center;
+    font-size: 24px;
+    color: white;
+    transition: text-shadow 250ms;
+    text-shadow: 0 0 1vh transparent;
+}
+
+.titlecard-i:hover {
+    text-shadow: 0 0 1vh white;
+}
+
+.titlecard-item {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+}
+
+.titlecard-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    aspect-ratio: 1 / 1;
+
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.titlecard-button:hover {
+    background-color: #ffffff13;
+}
+
+.titlecard-button:active {
+    background-color: rgba(0, 0, 0, 0.07);
+}
+
+/**SEARCH FEATURE**/
+.search-bar {
+    width: 0;
+    height: 65%;
+    transition: all 250ms;
+    background-color: transparent;
+    border: transparent 2px solid;
+    border-radius: 3px;
+}
+
+#search-bar.active {
+    width: 94%;
+    background-color: #00000059;
+    border: #fff 2px solid;
+}
+
+/**NEW ENTRY OPTIONS**/
+.LL-NewPost-Wrapper {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    height: 175px;
+}
+
+.LL-NewPost-Option {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #252525;
+    border-radius: 5px;
+    width: 200px;
+    bottom: 120px;
+
+    transition: all 250ms;
+    box-shadow: black 0 0 4px;
+    z-index: 1;
+}
+
+.LL-NewPost-Option > h2 {
+    margin: 10px;
+    filter: brightness(0.9);
+}
+
+.LL-NewPost-Option > h2:hover {
+    filter: brightness(1);
+    cursor: pointer;
+}
+
+.LL-NewPost-Option > h2:active {
+    filter: brightness(0.5);
+    cursor: pointer;
+}
+
+.LL-entry-gradient {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    bottom: 120px;
+    position: absolute;
+    transition: all 250ms;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+}
+
+.LL-Footer-Wrapper {
+    display: flex;
+    width: 100%;
+    height: 11%;
+    bottom: 0;
+    position: absolute;
+    background: var(--app-color-lemonlist-1);
+    z-index: 1;
+    box-shadow: #00000078 0 0 8px;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+/**SCROLL BAR**/
+.LL-Scroll-Wrapper {
+    display: block;
+    overflow-y: scroll;
+
+    width: 100%;
+    height: 88%;
+}
+
+.LL-Scroll-Wrapper::-webkit-scrollbar {
+    height: 4px;
+    width: 8px;
+    transform: translateX(8px);
+}
+
+.LL-Scroll-Wrapper::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.LL-Scroll-Wrapper::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/**LL SETTINGS PANEL**/
+.settings-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.1vh;
+
+    position: absolute;
+    z-index: 2;
+
+    width: 100%;
+    height: 86%;
+    left: -120%;
+    bottom: 0;
+
+    background-color: var(--app-color-lemonlist-bg);
+
+    transition: left 250ms;
+}
+
+#settings.active {
+    left: 0;
+}
+
+.setting-backer-p1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #101010;
+    display: flex;
+}
+
+.setting-backer-p2 {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    background-color: #36d6e2;
+    right: -10%;
+    display: flex;
+}
+
+.setting-backer-p3 {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color: #1486b3;
+    right: -10%;
+    display: flex;
+}
+
+.setting-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 5vh;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.setting-splitter {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background-color: var(--app-color-lemonlist-bg);
+}
+
+.setting-label {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+
+    display: flex;
+    justify-self: center;
+
+    user-select: none;
+}
+
+:nth-child(odd)>.setting-splitter {
+    background-color: var(--app-color-lemonlist-bg-2);
+}
+
+.setting-bottom {
+    width: 90%;
+    background: #00000054;
+    height: 0.2vh;
+}
+
+.setting-splitter>h1 {
+    font-weight: normal;
+    padding: 0 0 0 18px;
+}
+
+/* Hide the browser's default checkbox */
+.setting-label input {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.dropdown {
+    background-color: #3c3c3c;
+    color: white;
+    border: #3a3a3a solid 0.3vh;
+    border-radius: 0.5vh;
+    width: 100%;
+}
+
+.dropdown-content {
+    background-color: #303030;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: relative;
+    height: 3vh;
+    width: 3vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0.5vh;
+    background-color: #303030;
+}
+
+/* On mouse-over, add a grey background color */
+.setting-label:hover input~.checkmark {
+    background-color: #505050;
+}
+
+/* When the checkbox is checked, add a blue background */
+.setting-label input:checked~.checkmark {
+    background-color: var(--app-color-lemonlist-1);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.setting-label input:checked~.checkmark:after {
+    display: flex;
+}
+
+/* Style the checkmark/indicator */
+.setting-label .checkmark:after {
+    width: 0.75vh;
+    height: 0.75vh;
+    border: solid white;
+}
+
+.credits {
+    display: flex;
+    z-index: 1;
+    color: #3c3c3c;
+    justify-content: center;
+    padding-top: 1vh;
+}
+
+/** LEMON LIST CONTACT**/
+.LL-contact-wrapper {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size: 1.5vw;
+    align-self: center;
+}
+
+.call-button {
+    display: flex;
+    justify-content: center;
+    width: 5vh;
+    height: 5vh;
+    background-color: var(--app-color-lemonlist-1);
+    color: var(--app-color-lemonlist-font-1);
+    border-radius: 0.5vw 0.5vw 0 0;
+    cursor: pointer;
+    transition: all 100ms;
+    filter: none;
+}
+
+.i-contact {
+    cursor: pointer;
+}
+
+.i-contact:hover {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.33);
+}
+
+.i-contact:active {
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.33);
+    filter: brightness(0.8);
+}
+
+.call-button#custom-color {
+    background-color: var(--app-color-scheme-custom-font-1);
+}
+
+.call-button:hover>div>i {
+    color: black;
+}
+
+.message-button {
+    display: flex;
+    justify-content: center;
+    width: 5vh;
+    height: 5vh;
+    background-color: black;
+    color: var(--app-color-lemonlist-font-1);
+    border-radius: 0 0 0.5vw 0.5vw;
+    cursor: pointer;
+}
+
+.message-button:hover>div>i {
+    color: var(--app-color-lemonlist-1);
+}
+
+.message-button:hover#custom-color>div>i {
+    color: var(--app-color-scheme-custom-font-1);
+}
+
+/** LEMON LIST BOX**/
+.LL-Box-Wrapper {
+    height: fit-content;
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    padding: 0 3%;
+    position: relative;
+}
+
+.LL-Box-Wrapper:first-of-type {
+    margin-top: 6px;
+}
+
+.LL-Box-Wrapper:last-of-type {
+    margin-bottom: 6px;
+}
+
+.LL-Box {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    padding: 0.5vh 0 0.5vh 0;
+    flex-direction: column;
+}
+
+.LL-subbox {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 12px;
+    background-color: var(--app-color-lemonlist-bg-2);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.32) 0 0 8px;
+}
+
+.LL-subbox-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+/**New Note Button**/
+.new-note-button {
+    position: absolute;
+
+    width: 5vh;
+    height: 5vh;
+    bottom: 6vh;
+    right: 2vw;
+
+    background-color: #ffffff24;
+    border-radius: 1.5vw;
+    transition: border-radius 250ms;
+
+    cursor: pointer;
+}
+
+.new-note-button:hover {
+    border-radius: 2vw;
+}
+
+
+/**New Note Panel**/
+.new-work-panel, .new-note-panel {
+    position: absolute;
+    width: 100%;
+    height: 38%;
+    left: -0.15vh;
+    
+    background: #1d2127;
+    border: rgb(15, 15, 15) solid 0.3vh;
+    border-bottom: none;
+    border-radius: 1vw 1vw 1vw 0;
+    transition: bottom 250ms;
+    z-index: 1;
+}
+
+.new-work-panel {
+    height: 45%;
+}
+
+.new-work-entry, .new-note-entry {
+    width: auto;
+    height: 76%;
+    margin: 1vh;
+    padding: 1vh;
+    background: #ffffff08;
+    border-radius: 1vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-work-entry {
+    height: 60%;
+}
+
+.new-note-header {
+    position: relative;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    font-size: 2vh;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.new-note-entryfield {
+    position: relative;
+    box-sizing: border-box;
+    resize: none;
+    height: 100%;
+
+    border: 0.3vh solid #00000017;
+    border-radius: 0.25vh;
+    background-color: #00000030;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: normal;
+    font-size: 1.75vh;
+
+    line-height: 2vh;
+    padding: 0.5vw;
+}
+
+.new-note-color-wrapper {
+    position: absolute;
+    bottom: calc(18% - 0.3vh);
+    width: 63%;
+    height: 3vh;
+    background-color: #ffffff08;
+    border-radius: 0.5vh;
+    left: 3%;
+    margin: 0.3vh;
+}
+
+.note-button {
+    width: 4vh;
+    height: 3vh;
+    background: #1d2127;
+    position: absolute;
+    cursor: pointer;
+    border-bottom: transparent;
+}
+
+.note-button:active {
+    transform: scale(.95);
+}
+
+.red-hover {
+    left: 44.5%;
+    bottom: 100%;
+
+    border-radius: 5px 5px 0 0;
+    border: #121213 2px solid;
+    border-bottom: transparent;
+}
+
+.green-hover {
+    left: 80%;
+    bottom: 18%;
+    filter: drop-shadow(1px 1px 4px black);
+    border-radius: 5px;
+}
+
+.red-hover:hover {
+
+    background-color: #ff5343;
+}
+
+.green-hover:hover {
+
+    background-color: #8dff43;
+}
+
+.button-i {
+    display: flex;
+    height: 100%;
+
+    font-size: 1.8vw;
+    transition: font-size 250ms;
+}
+
+.note-button:hover>.button-i {
+    color: rgb(25, 25, 25);
+    font-size: 2vw;
+}
+
+.LL-Search-Header {
+    height: fit-content;
+    background-color: var(--app-color-contacts-bg-2);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 45px;
+    grid-template-rows: 1fr;
+}
+
+.LL-Search-Header input[type=text] {
+    display: flex;
+    flex-direction: column;
+    width: 92%;
+
+    float: right;
+    padding: 6px;
+    margin: 10px 0 8px 12px;
+    font-size: 17px;
+    background-color: var(--app-color-lemonlist-bg);
+    color: var(--app-color-lemonlist-font-1);
+
+    border-radius: var(--border-rad-medium);
+    border: none;
+}

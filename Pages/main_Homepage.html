@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang='en' id="htmlElement">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEET</title>
+
+    <script src="https://kit.fontawesome.com/a655b8fc00.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href='../Styles/style_Homepage.css' />
+    <link rel="stylesheet" href='../Styles/style_Notif.css' />
+    <link rel="import" href="main_Information.html">
+    <script src="../JS/appLoader.js"></script>
+    <script src="../JS/script_Pinger.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="top" onload="">
+    <div class="Phone-Overlay"></div>
+    <div class="Phone-Wrapper">
+        <div class="Phone-Divider">
+            <div class="Life-Bar">
+                <div class="Life-Bar-Buttons-Wrapper">
+                    <i class="fa-solid fa-bell" onclick="notifPopup()"></i>
+                    <i class="fa-solid fa-wifi"></i>
+                    <i class="fa-solid fa-battery-full"></i>
+                    <div class="Life-Bar-Notif" onclick="notifScreenToggle()" id="notif-bar"></div>
+                </div>
+                <div style="display: flex; flex-direction: column; text-align: center; padding-left: 28px; transform: translateY(1px);">
+                    <h1 style="font-size: 14px; margin: 0; font-weight: bold; color: white">09:41</h1>
+                    <h2 style="font-size: 11px; margin: 0; font-weight: 400; color: white">#69420</h2>
+                </div>
+            </div>
+            <div class="Camera-Notch">
+                <div class="Notch"></div>
+            </div>
+            <div
+                style="position: absolute; top: 10.75%; height: fit-content; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%;">
+                <div class="font1" style="font-size: 56px;">09:41</div>
+                <div class="font2" style="font-size: 17px;">7/10/1990</div>
+            </div>
+            <div style="position: absolute; height: 100%; width: 100%;" id="phone-box">
+                <div class="App-Grid-Wrapper">
+                    <div class="App-Grid">
+                        <div class="App-card App" style="background-image: url(../Images/info.png)">
+                            <div class="App-card-content">
+                                <div class="App-card-content-items">
+                                    <span class="App-card-title">Info</span>
+                                </div>
+                            </div>
+                            <a onclick="appLoad(0)"></a>
+                        </div>
+                        <div class="App-card App" style="background-image: url(../Images/track.png)">
+                            <div class="App-card-content">
+                                <div class="App-card-content-items">
+                                    <span class="App-card-title">Tracker</span>
+                                </div>
+                            </div>
+                            <a onclick="appLoad(1)"></a>
+                        </div>
+                        <div class="App-card App" style="background-image: url(../Images/emails.png)">
+                            <div class="App-card-content">
+                                <div class="App-card-content-items">
+                                    <span class="App-card-title">Email</span>
+                                </div>
+                            </div>
+                            <a href=""></a>
+                        </div>
+                        <div class="App-card App" style="background-image: url(../Images/news.png)">
+                            <div class="App-card-content">
+                                <div class="App-card-content-items">
+                                    <span class="App-card-title">Directory</span>
+                                </div>
+                            </div>
+                            <a  onclick="appLoad(3)"></a>
+                        </div>
+                        <div class="App-card App" style="background-image: url(../Images/twinsta.png)">
+                            <div class="App-card-content">
+                                <div class="App-card-content-items">
+                                    <span class="App-card-title">Twinsta</span>
+                                </div>
+                            </div>
+                            <a  onclick="appLoad(4)"></a>
+                        </div>
+                        <div class="App-card App" style="background-image: url(../Images/vehicles.png)">
+                            <div class="App-card-content">
+                                <div class="App-card-content-items">
+                                    <span class="App-card-title">Garage</span>
+                                </div>
+                            </div>
+                            <a href=""></a>
+                        </div>
+                        <div class="App-card App" style="background-image: url(../Images/calendar.png)">
+                            <div class="App-card-content">
+                                <div class="App-card-content-items">
+                                    <span class="App-card-title">Calendar</span>
+                                </div>
+                            </div>
+                            <a href=""></a>
+                        </div>
+                        <div class="App-card App" style="background-image: url(../Images/documents.png)">
+                            <div class="App-card-content">
+                                <div class="App-card-content-items">
+                                    <span class="App-card-title">Documents</span>
+                                </div>
+                            </div>
+                            <a href=""></a>
+                        </div>
+                        <div class="App-card App" style="background-image: url(../Images/wallet.png)">
+                            <div class="App-card-content">
+                                <div class="App-card-content-items">
+                                    <span class="App-card-title">Bank</span>
+                                </div>
+                            </div>
+                            <a href=""></a>
+                        </div>
+                        <div class="App-card App" style="background-image: url(../Images/calculator.png)">
+                            <div class="App-card-content">
+                                <div class="App-card-content-items">
+                                    <span class="App-card-title">Calculator</span>
+                                </div>
+                            </div>
+                            <a onclick="appLoad(9)"></a>
+                        </div>
+                        <div class="App-card App" style="background-image: url(../Images/settings.png)">
+                            <div class="App-card-content">
+                                <div class="App-card-content-items">
+                                    <span class="App-card-title">Settings</span>
+                                </div>
+                            </div>
+                            <a onclick="appLoad(11)"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="App-Chin-Wrapper">
+                    <div class="App-Grid App-Chin-Grid">
+                        <div class="App-card App" style="background-image: url(../Images/contacts.png)">
+                            <div class="App-card-content">
+                                <div class="App-card-content-items">
+                                    <span class="App-card-title">Contacts</span>
+                                </div>
+                            </div>
+                            <a onclick="appLoad(12)"></a>
+                        </div>
+                        <div class="App-card App" style="background-image: url(../Images/calls.png)">
+                            <div class="App-card-content">
+                                <div class="App-card-content-items">
+                                    <span class="App-card-title">Phone</span>
+                                </div>
+                            </div>
+                            <a href=""></a>
+                            <div class="App-card-ping">1</div>
+                        </div>
+                        <div class="App-card App" style="background-image: url(../Images/messages.png)">
+                            <div class="App-card-content">
+                                <div class="App-card-content-items">
+                                    <span class="App-card-title">Messages</span>
+                                </div>
+                            </div>
+                            <a href=""></a>
+                            <div class="App-card-ping">+999</div>
+                        </div>
+                        <div class="App-card App" style="background-image: url(../Images/settings.png)">
+                            <div class="App-card-content">
+                                <div class="App-card-content-items">
+                                    <span class="App-card-title">Settings</span>
+                                </div>
+                            </div>
+                            <a onclick="appLoad(11)"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="notif-scroll-wrapper" id="nw">
+                <div class="notif-wrapper" style="transform: translateY(-14vh);" id="n-10092d34">
+                    <div class="notif-icon-split">
+                        <div class="notif-icon"></div>
+                        <div class="notif-desc-split">
+                            <div class="notif-title-split">
+                                <h1 class="notif-title">Tracker</h1>
+                                <h2 class="notif-time" onclick="notifDelete('n-10092d34')">now<i class="fa-solid fa-trash notif-delete-i"></i></h2>
+                            </div>
+                            <h2 class="notif-desc">Someone is requesting to track you!</h2>
+                        </div>
+                    </div>
+                    <div class="notif-load" onclick="appLoad(-1, 'n-10092d34')"></div>
+                </div>
+            </div>
+            <div class="notif-page-wrapper" id="notif-page">
+                <div class="notif-page-scroll">
+                    <div class="notif-wrapper" onclick="appLoad(1)">
+                        <div class="notif-icon-split">
+                            <div class="notif-icon"></div>
+                            <div class="notif-desc-split">
+                                <div class="notif-title-split">
+                                    <h1 class="notif-title">Tracker</h1>
+                                    <h2 class="notif-time">now<i class="fa-solid fa-trash notif-delete-i"></i></h2>
+                                </div>
+                                <h2 class="notif-desc">Someone is requesting to track you!</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notif-wrapper" onclick="appLoad(1)">
+                        <div class="notif-icon-split">
+                            <div class="notif-icon" style="background-image: url(../Images/messages.png);"></div>
+                            <div class="notif-desc-split">
+                                <div class="notif-title-split">
+                                    <h1 class="notif-title">Sydney Harper</h1>
+                                    <h2 class="notif-time">now<i class="fa-solid fa-trash notif-delete-i"></i></h2>
+                                </div>
+                                <h2 class="notif-desc">I think I broke it...</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notif-wrapper" onclick="appLoad(1)">
+                        <div class="notif-icon-split">
+                            <div class="notif-icon" style="background-image: url(../Images/messages.png);"></div>
+                            <div class="notif-desc-split">
+                                <div class="notif-title-split">
+                                    <h1 class="notif-title">Sydney Harper</h1>
+                                    <h2 class="notif-time">1min ago<i class="fa-solid fa-trash notif-delete-i"></i></h2>
+                                </div>
+                                <h2 class="notif-desc">Does this look alright? I'm not sure, maybe if I...</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="notif-wrapper" onclick="appLoad(11)">
+                        <div class="notif-icon-split">
+                            <div class="notif-icon" style="background-image: url(../Images/settings.png);"></div>
+                            <div class="notif-desc-split">
+                                <div class="notif-title-split">
+                                    <h1 class="notif-title">Update Scheduled</h1>
+                                    <h2 class="notif-time">1hr ago<i class="fa-solid fa-trash notif-delete-i"></i></h2>
+                                </div>
+                                <h2 class="notif-desc">Update scheduled for after 3am if phone is on charge.</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+.notif-scroll-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    overflow: hidden;
+
+    width: 100%;
+    height: 35%;
+    top: 50px;
+    padding-top: 1vh;
+
+    z-index: 4;
+    pointer-events: none;
+}
+
+.notif-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    overflow: hidden;
+
+    backdrop-filter: blur(0.5vh) brightness(0.9);
+
+    width: 100%;
+    height: 100%;
+    gap: 0.5vh;
+
+    z-index: 3;
+    pointer-events: fill;
+    top: -100%;
+    transition: top 0.2s;
+}
+
+.npw-open {
+    top: 0;
+}
+
+.notif-page-scroll {
+    position: relative;
+    width: 100%;
+    height: 90.75%;
+    bottom: -8%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    padding-top: 1vh;
+}
+
+.notif-wrapper {
+    display: flex;
+    width: 95%;
+    height: fit-content;
+    min-height: 50px;
+
+    justify-content: center;
+    padding: 5px 0;
+
+    background-color: rgba(0, 0, 0, 0.39);
+    backdrop-filter: blur(0.5vh) brightness(0.9);
+    border-radius: 20px;
+
+    overflow: clip;
+
+    transition: transform 0.4s cubic-bezier(0.5, 0, 0.265, 1.1);
+
+    box-shadow: #0003 0 0 1vh;
+}
+
+.notif-load {
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    pointer-events: auto;
+    cursor: pointer;
+
+    overflow: clip;
+}
+
+.notif-delete {
+    pointer-events: auto;
+    cursor: pointer;
+
+    position: absolute;
+    width: 17.5%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    overflow: clip;
+}
+
+.notif-delete>div {
+    z-index: 3;
+
+    position: relative;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    right: -100%;
+    width: 85%;
+    height: 100%;
+
+    background-color: #bf1414a8;
+    transition: right 0.2s;
+}
+
+.notif-delete:hover>div {    
+    right: -15%;
+}
+
+.notif-delete-i {
+    font-size: 16px;
+    color: transparent;
+    transition: all 0.1s;
+    position: absolute;
+}
+
+:hover > .notif-delete-i {
+    color: red;
+    text-shadow: 0 0 1vh red;
+}
+
+.notif-icon-split {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    width: 97%;
+    height: 100%;
+
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 1fr;
+}
+
+.notif-icon {
+    width: 40px;
+    height: 40px;
+    background-image: url(../Images/track.png);
+    background-size: cover;
+    display: flex;
+    justify-self: center;
+    border-radius: 100%;
+}
+
+.notif-title-split {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1vw;
+}
+
+.notif-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.notif-desc {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: #e7e7e7;
+}
+
+.notif-time {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 300;
+
+    color: #b7b7b7;
+}
+
+.notif-time:hover {
+    color: transparent;
+}

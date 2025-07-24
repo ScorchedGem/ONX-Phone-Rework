@@ -1,0 +1,104 @@
+<div class="LL-Page">
+    <div class="LL-Footer-Wrapper">
+        <div class="LL-Search-Header">
+            <input type="text" placeholder="Search..">
+            <i class="fa-solid fa-address-book co-i" style="font-size: 20px"></i>
+        </div>
+    </div>
+    <div class="titlecard" id="titlecard">
+        <div class="titlecard-grid">
+            <div class="titlecard-item" style="justify-content: flex-start;" id="btn1"
+                 onclick="toggleSettingsPanel()">
+                <div class="titlecard-button"><i class="fa-solid fa-gear"></i></div>
+            </div>
+            <i class="titlecard-i fa-solid fa-map" id="btn2" onclick="toggleNewNoteSelector()">
+            </i>
+        </div>
+    </div>
+    <div class="LL-NewPost-Wrapper">
+        <div class="LL-NewPost-Option" id="ee1">
+            <h2 onclick="toggleNewPost(1)">
+                <i class="fa-solid fa-user-plus" style="padding-right: 0.5vw;"></i>Create Personal Listing</h2>
+            <h2 onclick="toggleNewPost(0)">
+                <i class="fa-solid fa-plus" style="padding-right: 0.5vw;"></i>Create Business Listing</h2>
+        </div>
+        <div class="LL-entry-gradient" id="ee2"></div>
+    </div>
+    <div class="LL-Scroll-Wrapper" id="entry-list"></div>
+    <div class="settings-wrapper" id="settings">
+        <div class="setting-backer-p1">
+            <div class="setting-backer-p2">
+                <div class="setting-backer-p3"></div>
+            </div>
+        </div>
+        <div class="setting-wrapper">
+            <div class="setting-splitter">
+                <h1 class="setting-h1">Use Favourite Color</h1>
+                <label class="setting-label">
+                    <input type="checkbox" onclick="toggleFavColor()">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </div>
+        <div class="setting-wrapper">
+            <div class="setting-splitter">
+                <h1 class="setting-h1">Bigger Font</h1>
+                <label class="setting-label">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </div>
+        <h2 class="credits">Rights Reserved. EchoSkies 2024</h2>
+    </div>
+    <div class="new-work-panel" id="new-entry-work" style="bottom: -50%;">
+        <div class="new-work-entry">
+            <select class="dropdown" name="Jobs" id="Business" style="font-size: 1.8vh;">
+                <option class="dropdown-content" value="1">Blackbird Customs</option>
+                <option class="dropdown-content" value="2">Sandy Pump n' Dump</option>
+            </select>
+            <div style="display: flex; align-items: center;">
+                <label class="setting-label">
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                </label>
+                <h3 style="font-size: 1.8vh; font-weight: 500; margin: 1vh 0 1vh 1vh;">Use current location in business listing?</h3>
+            </div>
+            <h2 style="bottom: 12vh; right: 2vw; display: flex;  position: absolute;">0/100</h2>
+            <textarea class="new-note-entryfield font2"></textarea>
+        </div>
+        <div class="new-note-color-wrapper">
+            <select class="dropdown" name="colors" id="ping-colors" style="font-size: 1.8vh;">
+                <option class="dropdown-content" value="1">White</option>
+                <option class="dropdown-content" value="2">Red</option>
+                <option class="dropdown-content" value="3">Orange</option>
+                <option class="dropdown-content" value="4">Yellow</option>
+                <option class="dropdown-content" value="5">Green</option>
+                <option class="dropdown-content" value="6">Pink</option>
+                <option class="dropdown-content" value="7">Purple</option>
+            </select>
+        </div>
+        <div class="note-button red-hover" onclick="toggleNewPost(-1)">
+            <i class="button-i fa-solid fa-xmark"></i>
+        </div>
+        <div class="note-button green-hover">
+            <i class="button-i fa-solid fa-check"></i>
+        </div>
+    </div>
+    <div class="new-note-panel" id="new-entry" style="bottom: -45%;">
+        <div class="new-note-entry">
+            <h1 class="new-note-header underline">John Doe</h1>
+            <textarea class="new-note-entryfield font2"></textarea>
+        <div class="note-button red-hover" onclick="toggleNewPost(-1)">
+            <i class="button-i fa-solid fa-xmark"></i>
+        </div>
+        <div class="note-button green-hover">
+            <i class="button-i fa-solid fa-check"></i>
+        </div>
+        </div>
+    </div>
+</div>
+<div style="z-index: 6; top: 0; width: 100%; height: 100%; position: absolute; background-color: var(--app-color-lemonlist-1); display: flex; justify-content: center; align-items: center;" id="banner"><i class="fa-solid fa-signs-post" style="font-size: 100px"></i></div>
+<div class="Home-Notch" style="background: transparent;">
+    <div class="Notch"><a onclick="appClose()" style="width: 100%; height: 400%; transform: translateY(-40%);"></a></div>
+</div>
