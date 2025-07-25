@@ -102,7 +102,7 @@ i,
     justify-content: center;
     align-items: center;
     position: absolute;
-    backdrop-filter: brightness(0.75) grayscale(0.1);
+    backdrop-filter: brightness(0.8) grayscale(0.1) blur(1px);
     box-shadow: 0 -1.1vh 1vh 0.5vh #0000006e;
     z-index: 4;
 }
