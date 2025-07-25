@@ -8,8 +8,8 @@
     --app-color-twinsta-2: #3cb6d2;
     --app-color-twinsta-bg: #1c1c1c;
     --app-color-twinsta-bg-2: #151515;
-    --app-color-twinsta-font-1: #f0f0f0;
-    --app-color-twinsta-font-2: rgb(215, 215, 215);
+    --app-color-twinsta-font-1: #ffffff;
+    --app-color-twinsta-font-2: rgb(228, 228, 228);
     --app-color-twinsta-font-3: #3cb6d2;
 
     --app-height: 100vh;
@@ -249,7 +249,7 @@ i,
     align-items: center;
 }
 
-.T-Header > i, .T-Header > img {
+.T-Header > div, .T-Header > img {
     color: rgb(255 255 255);
     width: 26px;
     height: 26px;
@@ -257,7 +257,7 @@ i,
     cursor: pointer;
 }
 
-.T-Header > i {
+.T-Header > div {
     justify-self: start;
     margin-left: 14px;
 }
@@ -356,6 +356,8 @@ i,
     height: 110px;
     width: 100%;
     overflow: hidden;
+    box-shadow: 0 0 8px 1px #000000;
+    z-index: 1;
 }
 
 .T-Profile-Img {
@@ -368,6 +370,7 @@ i,
     background-size: cover;
     box-shadow: #000000b0 0 0 8px;
     margin: 10px 10px 10px 14px;
+    z-index: 1;
 }
 
 .T-Profile-Banner {
@@ -382,10 +385,19 @@ i,
     align-items: center;
 }
 
+.T-Profile-Banner:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.33) 100%);
+}
+
 .T-Profile-Title {
     display: flex;
     flex-direction: column;
-    text-shadow: 0 0 4px BLACK;
+    text-shadow: 0 0 8px BLACK;
+    z-index: 1;
 }
 
 .T-Profile-Tabs-Wrapper {

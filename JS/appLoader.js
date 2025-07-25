@@ -91,13 +91,14 @@ async function appLoad(index, notifID) {
         importTag.id = "importTagID";
         document.body.appendChild(importTag);
 
-        if (!document.getElementById("importScriptID")) {
+        if (!document.getElementById("importScriptID_Directory")) {
             let importScriptTag = document.createElement('script');
-            importScriptTag.id = "importScriptID";
+            importScriptTag.id = "importScriptID_Directory";
             importScriptTag.src = '../JS/script_Directory.js';
             document.body.appendChild(importScriptTag);
-        } else {
-            await window.onload(onStart());
+        }
+        else {
+            onStart();
         }
 
         const response = await fetch('../Pages/main_Directory.html');
@@ -107,14 +108,12 @@ async function appLoad(index, notifID) {
         importTag.id = "importTagID";
         document.body.appendChild(importTag);
 
-        /*if (!document.getElementById("importScriptID")) {
+        if (!document.getElementById("importScriptID_Twinsta")) {
             let importScriptTag = document.createElement('script');
-            importScriptTag.id = "importScriptID";
+            importScriptTag.id = "importScriptID_Twinsta";
             importScriptTag.src = '../JS/script_Twinsta.js';
             document.body.appendChild(importScriptTag);
-        } else {
-            await window.onload(onStart());
-        }*/
+        }
 
         const response = await fetch('../Pages/main_Twinsta.html');
         elementRef.innerHTML = await response.text();
@@ -146,11 +145,10 @@ async function appLoad(index, notifID) {
 
         if (!document.getElementById("importScriptID_Contacts")) {
             let importScriptTag = document.createElement('script');
-            importScriptTag.id = "importScriptID";
+            importScriptTag.id = "importScriptID_Contacts";
             importScriptTag.src = '../JS/script_Contacts.js';
             document.body.appendChild(importScriptTag);
         }
-
 
         const response = await fetch('../Pages/main_Contacts.html');
         elementRef.innerHTML = await response.text();

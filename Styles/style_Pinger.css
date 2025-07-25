@@ -4,14 +4,15 @@
     --app-color-scheme-custom-font-1: #ff8cae;
     --app-color-scheme-custom-font-2: #e5c0dc;
 
-    --app-color-tracker-1: white;
-    --app-color-tracker-2: #252525;
-    --app-color-tracker-3: #737373;
-    --app-color-cal-bg-1: #e4e4e4;
-    --app-color-cal-bg-2: #ffe868;
+    --app-color-tracker-1: #191919;
+    --app-color-tracker-2: #131313;
+    --app-color-tracker-3: #151515;
+    --app-color-tracker-4: #252525;
+    --app-color-tracker-bg-1: #222222;
+    --app-color-tracker-bg-2: #ffe868;
     --app-color-tracker-bg-3: #0006;
     --app-color-tracker-font-1: #ffffff;
-    --app-color-tracker-font-2: #ffffff;
+    --app-color-tracker-font-2: rgb(255, 255, 255);
     --app-color-tracker-yes: #59ff82;
     --app-color-tracker-no: red;
 
@@ -54,13 +55,13 @@ h2 {
 .contact-h2 {
     font-size: 16px;
     font-weight: 600;
-    color: black;
+    color: var(--app-color-tracker-font-1);
 }
 
 .contact-h2-sid {
     font-size: 12px;
     font-weight: 400;
-    color: black;
+    color: var(--app-color-tracker-font-2);
     font-style: italic;
 }
 
@@ -96,7 +97,14 @@ i,
     height: 100%;
     width: 100%;
 
-    background: var(--app-color-cal-bg-1);
+    background: var(--app-color-tracker-bg-1);
+    background: repeating-linear-gradient(
+            45deg,
+            #242424,
+            #242424 10px,
+            #202020 10px,
+            #202020 20px
+    );
 
     z-index: 3;
 
@@ -136,7 +144,6 @@ i,
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: 0.5vh;
 }
 
 .t-titlecard-button {
@@ -176,7 +183,7 @@ i,
     position: absolute;
     display: grid;
     width: 200%;
-    height: 81%;
+    height: 80%;
 
     grid-template-columns: 1fr 1fr;
     transition: left 0.2s;
@@ -192,6 +199,7 @@ i,
     position: relative;
     align-items: center;
     bottom: 0;
+    gap: 6px;
 }
 
 .contact {
@@ -199,24 +207,22 @@ i,
     flex-direction: row;
     gap: 8px;
     height: fit-content;
-    width: 90%;
+    width: 94%;
     background-color: var(--app-color-tracker-1);
-    border-radius: 30px 5px 5px 30px;
+    border-radius: 6px;
     align-items: center;
     padding: 6px 0 6px 6px;
-    margin-top: 10px;
+}
 
-    box-shadow: 1px 4px 12px 0 rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 1px 4px 12px 0 rgb(0 0 0 / 36%);
-    -moz-box-shadow: 1px 4px 12px 0 rgba(0,0,0,0.75);
+.contact:first-child {
+    margin-top: 6px;
 }
 
 .contact-img {
-    width: 4vh;
-    height: 4vh;
-    border-radius: 3vh;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
     background-image: url(https://static.onx.gg/phone-avatar/4907bde3-2c0d-4b07-bfa3-e0b7534a1904.png);
-    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -246,13 +252,13 @@ i,
 
 .i-contact {
     font-size: 20px;
-    color: var(--app-color-tracker-3);
+    color: var(--app-color-tracker-font-1);
     cursor: pointer;
 }
 
 .i-contact:hover {
-    color: var(--app-color-cal-bg-2);
-    text-shadow: 0 0 4px rgba(0, 0, 0, 1);
+    filter: brightness(0.9);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.33);
 }
 
 .i-contact-cross:hover {
@@ -296,20 +302,12 @@ i,
     color: transparent;
 }
 
-.svg_icon {
-    position: absolute;
-    left: 10px;
-    fill: #000000;
-    width: 18px;
-    height: 18px;
-}
-
 .tracker-wrapper {
     position: absolute;
     display: flex;
     overflow: hidden;
     width: 100%;
-    height: 19%;
+    height: 20%;
 
     background-color: var(--app-color-tracker-2);
     top: 0;
@@ -374,7 +372,7 @@ i,
     align-items: center;
     justify-content: center;
     
-    background: var(--app-color-cal-bg-2);
+    background: var(--app-color-tracker-bg-2);
     color: var(--app-color-tracker-2);
     border-radius: 30px;
 

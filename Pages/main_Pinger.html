@@ -1,18 +1,17 @@
 <div class="LL-Page">
-    <script src="../JS/script_Pinger.js" ></script>
+    <script src="../JS/script_Pinger.js"></script>
     <div class="I-Main-Wrapper">
+        <div class="G-Logo"></div>
         <div class="tracker-wrapper">
-            <div style="display: flex; align-items: center; width: 100%;">
-                <div style="display: flex; align-items: center; width: 100%;">
+            <div class="G-Header-Wrapper" style="background: var(--app-color-twinsta-bg-2)">
+                <div class="G-Header">
+                    <div class="G-Header-Button"><i class="fa-solid fa-bars"></i></div>
                     <div style="display: flex; align-items: center;">
-                        <div class="t-titlecard-button" style="padding: 5px 0 5px 4px;"><i class="fa-solid fa-globe"></i></div>
-                        <h1 style="padding: 5px 0 5px 0; color: #ffe868; font-weight: 700;">ONX</h1>
+                        <h1 style="padding: 5px 0 5px 0; font-weight: 700;">Peepo</h1>
+                        <h1 style="padding: 5px 5px 5px 0; color: #ffe868; ">NX</h1>
                     </div>
-                        <h1 style="padding: 5px 5px 5px 0;">PLORE</h1>
                 </div>
-                <div class="t-titlecard-button"><i class="fa-solid fa-gear"></i></div>
             </div>
-
             <div class="tracker-grid">
                 <div class="tracker-grid-entry tracker-active" onclick="swapTab(0)" id="tracking">
                     <h3 class="tracker-h3">Tracking</h3>
@@ -22,7 +21,9 @@
                 </div>
             </div>
         </div>
-        <div class="track-notif-ping-wrapper"><div class="track-notif-ping" id="gpsmark">GPS UPDATED</div></div>
+        <div class="track-notif-ping-wrapper">
+            <div class="track-notif-ping" id="gpsmark">GPS UPDATED</div>
+        </div>
         <div class="pages-wrapper" id="pages-wrapper">
             <div class="tab-wrapper">
                 <div class="contact-wrapper">
@@ -36,10 +37,13 @@
                             <h2 class="contact-h2">Fly Dork</h2>
                             <h2 class="contact-h2-sid">15248</h2>
                         </div>
-                        <div style="display: flex; position: absolute; right: 3vh;"><i class="i-contact fa-solid fa-map" onclick="updateGPS()"></i></div>
+                        <div style="display: flex; position: absolute; right: 22px;">
+                            <i class="G-Button fa-solid fa-map" style="font-size: 20px" onclick="updateGPS()"></i>
+                        </div>
                     </div>
                     <div class="contact">
-                        <div class="contact-img" style="background-image: url(https://static.onx.gg/phone-avatar/f3991569-7bb6-466b-bf13-baeda29560c7.png)">
+                        <div class="contact-img"
+                             style="background-image: url(https://static.onx.gg/phone-avatar/f3991569-7bb6-466b-bf13-baeda29560c7.png)">
                             <div class="t-delete-entry">
                                 <i class="t-i-delete-entry fa-solid fa-xmark"></i>
                             </div>
@@ -48,10 +52,13 @@
                             <h2 class="contact-h2">Jay Garrison</h2>
                             <h2 class="contact-h2-sid">9066</h2>
                         </div>
-                        <div style="display: flex; position: absolute; right: 3vh;"><i class="i-contact fa-solid fa-map" onclick="updateGPS()"></i></div>
+                        <div style="display: flex; position: absolute; right: 22px;">
+                            <i class="G-Button fa-solid fa-map" style="font-size: 20px" onclick="updateGPS()"></i>
+                        </div>
                     </div>
                     <div class="contact">
-                        <div class="contact-img" style="background-image: url(https://static.onx.gg/phone-avatar/37bee4c6-d064-4dd5-9c7e-1d4a392c7c77.png)">
+                        <div class="contact-img"
+                             style="background-image: url(https://static.onx.gg/phone-avatar/37bee4c6-d064-4dd5-9c7e-1d4a392c7c77.png)">
                             <div class="t-delete-entry">
                                 <i class="t-i-delete-entry fa-solid fa-xmark"></i>
                             </div>
@@ -60,7 +67,9 @@
                             <h2 class="contact-h2">Jacob Stevens</h2>
                             <h2 class="contact-h2-sid">18019</h2>
                         </div>
-                        <div style="display: flex; position: absolute; right: 3vh;"><i class="i-contact fa-solid fa-map" onclick="updateGPS()"></i></div>
+                        <div style="display: flex; position: absolute; right: 22px;">
+                            <i class="G-Button fa-solid fa-map" style="font-size: 20px" onclick="updateGPS()"></i>
+                        </div>
                     </div>
                     <div class="contact">
                         <div class="contact-img">
@@ -72,7 +81,9 @@
                             <h2 class="contact-h2">Someone ReallyCool</h2>
                             <h2 class="contact-h2-sid">2024</h2>
                         </div>
-                        <div style="display: flex; position: absolute; right: 3vh;"><i class="i-contact fa-solid fa-map" onclick="updateGPS()"></i></div>
+                        <div style="display: flex; position: absolute; right: 22px;">
+                            <i class="G-Button fa-solid fa-map" style="font-size: 20px" onclick="updateGPS()"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,7 +95,8 @@
                             <h2 class="contact-h2">Fly Dork</h2>
                             <h2 class="contact-h2-sid">15248</h2>
                         </div>
-                        <div style="display: flex; position: absolute; right: 3vh;"><i class="i-contact i-contact-cross fa-solid fa-xmark"></i></div>
+                        <div style="display: flex; position: absolute; right: 3vh;"><i
+                                class="i-contact i-contact-cross fa-solid fa-xmark"></i></div>
                     </div>
                     <div class="contact">
                         <div class="contact-img"
@@ -94,7 +106,8 @@
                             <h2 class="contact-h2">Jay Garrison</h2>
                             <h2 class="contact-h2-sid">9066</h2>
                         </div>
-                        <div style="display: flex; position: absolute; right: 3vh;"><i class="i-contact i-contact-cross fa-solid fa-xmark"></i></div>
+                        <div style="display: flex; position: absolute; right: 3vh;"><i
+                                class="i-contact i-contact-cross fa-solid fa-xmark"></i></div>
                     </div>
                     <div class="contact">
                         <div class="contact-img"
@@ -103,7 +116,8 @@
                             <h2 class="contact-h2">Jacob Stevens</h2>
                             <h2 class="contact-h2-sid">18019</h2>
                         </div>
-                        <div style="display: flex; position: absolute; right: 3vh;"><i class="i-contact i-contact-cross fa-solid fa-xmark"></i></div>
+                        <div style="display: flex; position: absolute; right: 3vh;"><i
+                                class="i-contact i-contact-cross fa-solid fa-xmark"></i></div>
                     </div>
                     <div class="contact">
                         <div class="contact-img"></div>
@@ -111,7 +125,8 @@
                             <h2 class="contact-h2">Someone ReallyCool</h2>
                             <h2 class="contact-h2-sid">2024</h2>
                         </div>
-                        <div style="display: flex; position: absolute; right: 3vh;"><i class="i-contact i-contact-cross fa-solid fa-xmark"></i></div>
+                        <div style="display: flex; position: absolute; right: 3vh;"><i
+                                class="i-contact i-contact-cross fa-solid fa-xmark"></i></div>
                     </div>
                 </div>
             </div>

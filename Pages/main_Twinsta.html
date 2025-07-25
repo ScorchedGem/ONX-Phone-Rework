@@ -1,5 +1,5 @@
 <div class="T-Page" style="z-index: 2; position: relative;">
-    <div class="T-Scroll-Wrapper">
+    <div class="T-Scroll-Wrapper" id=twinsta-p1>
         <div class="T-Post-Wrapper">
             <div class="T-Post-Profile-Img" style="background-image: url('../Images/BANNER2.png');"></div>
             <div class="T-Post-Content">
@@ -106,10 +106,16 @@
             </div>
         </div>
     </div>
-    <div class="T-Profile-Wrapper" style="z-index: 1; left: 0;">
+    <div class="T-Profile-Wrapper" style="left: 100%; z-index: 1;" id=twinsta-p2>
+        <div style="width:100%; height: 100%; display: flex; background: white;"></div>
+    </div>
+    <div class="T-Profile-Wrapper" style="left: 100%; z-index: 1;" id=twinsta-p3>
+        <div style="width:100%; height: 100%; display: flex; background: black;"></div>
+    </div>
+    <div class="T-Profile-Wrapper" style="left: 100%; transition: left 200ms; z-index: 1;" id=twinsta-p4>
         <div class="T-Scroll-Wrapper">
             <div class="T-Profile-Header">
-                <div class="T-Profile-Banner">
+                <div class="T-Profile-Banner" style="background-image: url('../Images/BANNER3.png');">
                     <div class="T-Profile-Img" style="background-image: url('../Images/pfp2.png');"></div>
                     <div class="T-Profile-Title">
                         <h1>Ash Shinda</h1>
@@ -225,18 +231,18 @@
             </div>
         </div>
     </div>
-    <div class="T-Header-Wrapper">
-        <div class="T-Header">
-            <i class="fa-solid fa-bars"></i>
-            <img src="../Images/apeture.svg" alt=""/>
+    <div class="G-Header-Wrapper" style="background: var(--app-color-twinsta-bg-2)">
+        <div class="G-Header">
+            <div class="G-Header-Button"><i class="fa-solid fa-bars"></i></div>
+            <i class="fa-brands fa-bluesky"></i>
         </div>
     </div>
     <div class="T-Footer-Wrapper">
         <div class="T-Footer-Tab-Wrapper">
-            <div class="T-Footer-Tab-Button T-Active-Tab"><i class="fa-solid fa-house"></i></div>
-            <div class="T-Footer-Tab-Button"><i class="fa-solid fa-magnifying-glass"></i></div>
-            <div class="T-Footer-Tab-Button"><i class="fa-solid fa-bell"></i></div>
-            <div class="T-Footer-Tab-Button"><i class="fa-solid fa-user"></i></div>
+            <div id="tb-1" class="T-Footer-Tab-Button T-Active-Tab" onclick="TwinstaTab(0)"><i class="fa-solid fa-house"></i></div>
+            <div id="tb-2" class="T-Footer-Tab-Button" onclick="TwinstaTab(1)"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div id="tb-3" class="T-Footer-Tab-Button" onclick="TwinstaTab(2)"><i class="fa-solid fa-bell"></i></div>
+            <div id="tb-4" class="T-Footer-Tab-Button" onclick="TwinstaTab(3)"><i class="fa-solid fa-user"></i></div>
         </div>
     </div>
 </div>

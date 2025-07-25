@@ -83,36 +83,11 @@ i,
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 14% 1fr;
+    grid-template-rows: 14.5% 1fr;
     z-index: 2;
 }
 
 /**APP TITLE CARD**/
-.titlecard {
-    display: flex;
-    align-items: flex-end;
-
-    position: relative;
-    width: 100%;
-    z-index: 3;
-
-    background-color: var(--app-color-lemonlist-1);
-    box-shadow: 0 -11px 12px 10px #00000091;
-}
-
-.titlecard-grid {
-    position: relative;
-    width: 100%;
-    height: 45%;
-
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0;
-    grid-row-gap: 0;
-}
-
 .search-wrapper {
     width: 79%;
     height: 45%;
@@ -128,41 +103,16 @@ i,
     justify-self: center;
     font-size: 24px;
     color: white;
-    transition: text-shadow 250ms;
+    transition: text-shadow 100ms;
     text-shadow: 0 0 1vh transparent;
 }
 
 .titlecard-i:hover {
-    text-shadow: 0 0 1vh white;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.33);
 }
 
-.titlecard-item {
-    display: flex;
-    align-items: center;
-    padding-left: 8px;
-}
-
-.titlecard-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 30px;
-    aspect-ratio: 1 / 1;
-
-    background-color: transparent;
-    border-radius: 5px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.1s;
-}
-
-.titlecard-button:hover {
-    background-color: #ffffff13;
-}
-
-.titlecard-button:active {
-    background-color: rgba(0, 0, 0, 0.07);
+.titlecard-i:active {
+    filter: brightness(0.8);
 }
 
 /**SEARCH FEATURE**/
@@ -184,7 +134,7 @@ i,
 /**NEW ENTRY OPTIONS**/
 .LL-NewPost-Wrapper {
     display: flex;
-    position: absolute;
+    position: relative;
     justify-content: center;
     width: 100%;
     height: 175px;
@@ -278,7 +228,7 @@ i,
     z-index: 2;
 
     width: 100%;
-    height: 86%;
+    height: 85.5%;
     left: -120%;
     bottom: 0;
 
