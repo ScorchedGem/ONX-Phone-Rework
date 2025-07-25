@@ -29,7 +29,7 @@ h2 {
     margin: 0;
 
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 200;
 
     color: var(--app-color-twinsta-font-2);
 }
@@ -96,12 +96,13 @@ i,
     flex-direction: row;
     width: 100%;
     height: fit-content;
-    border-bottom: 2px solid #151515;
+    border-bottom: 2px solid #0000006e;
     background-color: var(--app-color-twinsta-bg);
+    background: linear-gradient(90deg, #191919 0%, var(--app-color-twinsta-bg) 25%, var(--app-color-twinsta-bg) 100%);
 }
 
 .T-Post-Wrapper:first-child {
-    border-top: 2px solid black;
+    border-top: 2px solid #0000006e;
 }
 
 .T-Post-Profile-Img {
@@ -112,6 +113,8 @@ i,
     background-repeat: no-repeat;
     background-size: cover;
     margin: 16px 8px 0 8px;
+    border: solid rgba(0, 0, 0, 0.5) 1px;
+    box-shadow: 0 0 3px #0000009e;
 }
 
 .T-Post-Content {
@@ -139,12 +142,12 @@ i,
     margin: 2px 0 6px 0;
 }
 
-.T-Post-Header > h1 {
+.T-Post-Header > > h1 {
     padding-right: 4px;
     font-weight: 600;
 }
 
-.T-Post-Header > h2 {
+.T-Post-Header > > h2 {
     padding-right: 4px;
     font-weight: 400;
 }

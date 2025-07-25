@@ -23,8 +23,9 @@
     height: 11%;
     width: 90%;
 
-    background-color: #7d7d7d44;
-    border-radius: var(--border-rad-large);
+    background-color: #00000044;
+    border-radius: var(--border-rad-xlarge);
+    backdrop-filter: blur(1px);
 
     position: absolute;
     display: flex;
@@ -63,7 +64,7 @@
     background-image: none;
     background-color: #ffffff;
     border-radius: 20%;
-    transition: 0.3s;
+    transition: 0.15s ease-out;
     z-index: 1;
 
     background-size: 110%;

@@ -64,10 +64,8 @@ i,
     display: flex;
     width: 296px;
     height: 652px;
-    /*aspect-ratio: 1 / 2.25;*/
 
-    /*background-image: url(https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsX29mZmljZV8zM193YWxscGFwZXJfb2ZfY2xvdWRzX2dyYWRpZW50X2dsaXR0ZXJfb25fc2ltcF8zNzFmOGU1Zi1jZTM2LTRjNjctOWMyZC1lMWZkZTI1YmEwM2ZfMS5qcGc.jpg);*/
-    background-image: url(../Images/background.png);
+    background-image: url('../Images/wallpaper2.png');
     background-position: center;
     background-size: cover;
     border-radius: 35px;
@@ -80,7 +78,6 @@ i,
     display: flex;
     width: 315px;
     height: 665px;
-    /*aspect-ratio: 1 / 2.18;*/
 
     background-size: cover;
     background-repeat: round;
