@@ -73,7 +73,7 @@ async function appLoad(index, notifID) {
 
     if (index === 0) {
         importTag.setAttribute('href', '../Styles/style_Info.css');
-        importTag.id = "importTagID";
+        importTag.id = "importTagID_Info";
         document.body.appendChild(importTag);
 
         const response = await fetch('../Pages/main_Information.html');
@@ -81,7 +81,7 @@ async function appLoad(index, notifID) {
 
     } else if (index === 1) {
         importTag.setAttribute('href', '../Styles/style_Pinger.css');
-        importTag.id = "importTagID";
+        importTag.id = "importTagID_Pinger";
         document.body.appendChild(importTag);
 
         const response = await fetch('../Pages/main_Pinger.html');
@@ -105,7 +105,7 @@ async function appLoad(index, notifID) {
         elementRef.innerHTML = await response.text();
     } else if (index === 4) {
         importTag.setAttribute('href', '../Styles/style_Twinsta.css');
-        importTag.id = "importTagID";
+        importTag.id = "importTagID_Twinsta";
         document.body.appendChild(importTag);
 
         if (!document.getElementById("importScriptID_Twinsta")) {
@@ -119,14 +119,14 @@ async function appLoad(index, notifID) {
         elementRef.innerHTML = await response.text();
     } else if (index === 9) {
         importTag.setAttribute('href', '../Styles/style_Calculator.css');
-        importTag.id = "importTagID";
+        importTag.id = "importTagID_Calculator";
         document.body.appendChild(importTag);
 
         const response = await fetch('../Pages/main_Calculator.html');
         elementRef.innerHTML = await response.text();
     } else if (index === 11) {
         importTag.setAttribute('href', '../Styles/style_Settings.css');
-        importTag.id = "importTagID";
+        importTag.id = "importTagID_Settings";
         document.body.appendChild(importTag);
 
         if (!document.getElementById("importScriptID_Settings")) {
@@ -140,7 +140,7 @@ async function appLoad(index, notifID) {
         elementRef.innerHTML = await response.text();
     } else if (index === 12) {
         importTag.setAttribute('href', '../Styles/style_Contacts.css');
-        importTag.id = "importTagID";
+        importTag.id = "importTagID_Contacts";
         document.body.appendChild(importTag);
 
         if (!document.getElementById("importScriptID_Contacts")) {

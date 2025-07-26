@@ -6,8 +6,8 @@
 
     --app-color-twinsta-1: #353535;
     --app-color-twinsta-2: #3cb6d2;
-    --app-color-twinsta-bg: #1c1c1c;
-    --app-color-twinsta-bg-2: #151515;
+    --app-color-twinsta-bg: black;
+    --app-color-twinsta-bg-2: black;
     --app-color-twinsta-font-1: #ffffff;
     --app-color-twinsta-font-2: rgb(228, 228, 228);
     --app-color-twinsta-font-3: #3cb6d2;
@@ -98,7 +98,6 @@ i,
     height: fit-content;
     border-bottom: 2px solid #0000006e;
     background-color: var(--app-color-twinsta-bg);
-    background: linear-gradient(90deg, #191919 0%, var(--app-color-twinsta-bg) 25%, var(--app-color-twinsta-bg) 100%);
 }
 
 .T-Post-Wrapper:first-child {
@@ -215,6 +214,18 @@ i,
     cursor: pointer;
 }
 
+.T-Post-Footer-Button:nth-child(1) > i:hover {
+    color: #98ff98;
+}
+
+.T-Post-Footer-Button:nth-child(2) > i:hover {
+    color: #ff9595;
+}
+
+.T-Post-Footer-Button:nth-child(3) > i:hover {
+    color: #91e4fd;
+}
+
 .T-Post-F-Button-Active > i {
     color: var(--app-color-twinsta-font-3);
     opacity: 1;
@@ -228,43 +239,6 @@ i,
     opacity: 0.6;
 }
 
-.T-Header-Wrapper {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 95px;
-    background: var(--app-color-twinsta-bg-2);
-    top: 0;
-    box-shadow: 0 0 8px black;
-    z-index: 1;
-}
-
-.T-Header {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    position: absolute;
-    height: 45px;
-    width: 100%;
-    bottom: 0;
-
-    justify-items: center;
-    align-items: center;
-}
-
-.T-Header > div, .T-Header > img {
-    color: rgb(255 255 255);
-    width: 26px;
-    height: 26px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-.T-Header > div {
-    justify-self: start;
-    margin-left: 14px;
-}
-
 .T-Footer-Wrapper {
     display: flex;
     position: absolute;
@@ -272,7 +246,7 @@ i,
     height: 68px;
     background: var(--app-color-twinsta-bg-2);
     bottom: 0;
-    box-shadow: 0 0 8px black;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.38);
     z-index: 1;
 }
 
