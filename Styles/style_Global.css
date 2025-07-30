@@ -9,12 +9,6 @@
     --app-color-scheme-custom-font-1: #ffffff;
     --app-color-scheme-custom-font-2: #e2e2e2;
 
-    --app-color-lemonlist-bg: #1e1e1e;
-    --app-color-lemonlist-bg-2: #272727;
-    --app-color-lemonlist-1: #E9C430;
-    --app-color-lemonlist-font-1: #f0f0f0;
-    --app-color-lemonlist-font-2: rgb(215, 215, 215);
-
     --border-rad-small: 3px;
     --border-rad-medium: 5px;
     --border-rad-large: 10px;
@@ -53,6 +47,7 @@ h2,
 span,
 i,
 .font1 {
+    user-select: text;
     color: var(--app-color-scheme-custom-font-1)
 }
 

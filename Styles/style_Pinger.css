@@ -209,7 +209,7 @@ i,
     height: fit-content;
     width: 94%;
     background-color: var(--app-color-tracker-1);
-    border-radius: 6px;
+    border-radius: 50px;
     align-items: center;
     padding: 6px 0 6px 6px;
 }
@@ -358,30 +358,31 @@ i,
     justify-content: center;
 
     width: 100%;
-    height: 2.25vh;
+    height: 45px;
     bottom: 7.5%;
 }
 
 .track-notif-ping {
     display: flex;
     position: relative;
-    width: 38%;
+    width: 55%;
     height: 100%;
-    
     text-align: center;
     align-items: center;
     justify-content: center;
-    
-    background: var(--app-color-tracker-bg-2);
-    color: var(--app-color-tracker-2);
+    background: #00000026;
+    color: #ffee62;
     border-radius: 30px;
-
     font-size: 12px;
     font-weight: 900;
-
     transition: all .1s;
     top: 0;
+    box-shadow: #00000057 0 0 8px 4px;
     filter: opacity(0);
+    backdrop-filter: blur(4px);
+    border: solid #00000070 2px;
+    border-left: #ffee62 solid;
+    border-right: #ffee62 solid;
 }
 
 .track-notif-ping-active {

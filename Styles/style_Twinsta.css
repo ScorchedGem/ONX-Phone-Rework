@@ -246,7 +246,7 @@ i,
     height: 68px;
     background: var(--app-color-twinsta-bg-2);
     bottom: 0;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.38);
+    border-top: solid white 1px;
     z-index: 1;
 }
 
